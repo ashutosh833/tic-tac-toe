@@ -108,5 +108,3 @@ allBox.forEach((el)=>{
     });    
 
     });
-
-
