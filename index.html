@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Tic Tac Toe</li>
+        </ul>
+    </nav>
+    <div class="gameContainer">
+        <div class="container">
+            <div id="box1" class= "box row-1 col-1 d-1 bl-0 bt-0"><span class="boxcontent"></span></div>
+            <div id="box2" class="box row-1 col-2 bt-0"><span class="boxcontent"></span></div>
+            <div id="box3" class="box row-1 col-3 bt-0 br-0"><span class="boxcontent"></span></div>
+            <div id="box4" class="box row2 col-1 bl-0"><span class="boxcontent"></span></div>
+            <div id="box5" class="box row2 d-2 d-1 col-2"><span class="boxcontent"></span></div>
+            <div id="box6" class="box row2 col-3 br-0"><span class="boxcontent"></span></div>
+            <div id="box7" class="box row3 d-2 col-1 bl-0 bb-0"><span class="boxcontent"></span></div>
+            <div id="box8" class="box row3 col-2 bb-0"><span class="boxcontent"></span></div>
+            <div id="box9" class="box row3 d-1 col-3 bb-0 br-0"><span class="boxcontent"></span></div>
+        </div>
+        <div class="GameInfo">
+            <h1 class="heading">Welcome to Tic Tac Toe Game</h1>
+          <span class="info"></span>
+          <div class="Players">
+            <h2 class="first">first player</h2>
+            <h2 class="second">second player</h2>
+            <h2 class="turns">your turns</h2>
+            <h2 class="winningStatus">turns</h2>           
+          </div>
+          <button id="reset">Reset</button>
+          <div class="img">
+            <img src="excited.gif" alt="">
+          </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
