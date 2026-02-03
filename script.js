@@ -31,7 +31,7 @@ function gameOver(){
     tingAudio.pause();
     img.style.display="block";
     setTimeout(()=>{
-    img.style.display="block";
+    img.style.display="none";
     },1000);
     started=false;
     bgmusic.pause();
@@ -108,4 +108,5 @@ allBox.forEach((el)=>{
     });    
 
     });
+
 
