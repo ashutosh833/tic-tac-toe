@@ -127,12 +127,16 @@ margin-top: 50px;
     }
     .container{
         margin:1.8rem;
+        margin-left:3rem;
         grid-template-columns: repeat(3,7rem);
         grid-template-rows: repeat(3,10vh);
         text-align: center;
         width: 100%;
         max-width: 30rem;
         padding-top: 1.5rem;
+    }
+    .box{
+        background-color:white;
     }
     .GameInfo{
     width:100%;
@@ -176,6 +180,7 @@ margin-top: 50px;
 }
 
 }
+
 
 
 
