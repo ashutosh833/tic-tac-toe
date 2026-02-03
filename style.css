@@ -120,7 +120,7 @@ margin-top: 50px;
         font-size: 11px;
         width: 100%;
         max-width: 650px;
-        max-height: 640px;
+        max-height: 650px;
         background: #509ec8;
         display: flex;
         flex-direction: column;
@@ -176,5 +176,6 @@ margin-top: 50px;
 }
 
 }
+
 
 
