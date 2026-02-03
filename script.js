@@ -32,6 +32,7 @@ function gameOver(){
     img.style.display="block";
     setTimeout(()=>{
     img.style.display="none";
+    winner.innerHTML="Your Welcome";
     },1000);
     started=false;
     bgmusic.pause();
@@ -108,3 +109,4 @@ allBox.forEach((el)=>{
     });    
 
     });
+
