@@ -30,6 +30,9 @@ let started=false;
 function gameOver(){
     tingAudio.pause();
     img.style.display="block";
+    setTimeout(()=>{
+    img.style.display="block";
+    },1000);
     started=false;
     bgmusic.pause();
     gameover.play();
@@ -105,3 +108,4 @@ allBox.forEach((el)=>{
     });    
 
     });
+
