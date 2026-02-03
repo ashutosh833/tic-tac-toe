@@ -31,8 +31,8 @@ function gameOver(){
     tingAudio.pause();
     img.style.display="block";
     setTimeout(()=>{
-    img.style.display="none";
     winner.innerHTML="Your Welcome";
+    img.style.display="none";
     },1000);
     started=false;
     bgmusic.pause();
@@ -41,8 +41,29 @@ function gameOver(){
         el.innerHTML="";
     }
 };
+function gameOver2(){
+    tingAudio.pause();
+    img.style.display="block";
+    winner.innerHTML="match draw";
+    setTimeout(()=>{
+    winner.innerHTML="Your Welcome";
+    img.style.display="none";
+    },1500);
+    started=false;
+    bgmusic.pause();
+    gameover.play();
+    for(el of allBox){
+        el.innerHTML="";
+    }
+}
 
 function checkWinner1(){
+                let draw=Array.from(allBox).every((el)=>(el.innerHTML==="X"||el.innerHTML==="O"));
+                console.log(draw);
+                if(draw==true){
+                console.log("match draw");
+                gameOver2();
+               }
                 let conditionR1=firarr.every((el)=>(el.innerHTML!==""&&el.innerHTML==="X"));
                 let conditionR2=secarr.every((el)=>(el.innerHTML!==""&&el.innerHTML==="X"));
                 let conditionR3=thirdRow.every((el)=>(el.innerHTML!==""&&el.innerHTML==="X"));
@@ -61,8 +82,16 @@ function checkWinner1(){
                   firScore++;
                   firstPlayer.innerHTML= `${firPlrInp}:${firScore}`;    
                 }
+                
 }
 function checkWinner2(){
+                let draw=Array.from(allBox).every((el)=>(el.innerHTML==="X"||el.innerHTML==="O"));
+                console.log(draw);
+                if(draw==true){
+                console.log("match draw");
+                gameOver2();
+                gameOver();
+               }
                 let conditionR1=firarr.every((el)=>(el.innerHTML!==""&&el.innerHTML==="O"));
                 let conditionR2=secarr.every((el)=>(el.innerHTML!==""&&el.innerHTML==="O"));
                 let conditionR3=thirdRow.every((el)=>(el.innerHTML!==""&&el.innerHTML==="O"));
@@ -71,6 +100,7 @@ function checkWinner2(){
                 let conditionC3=thirdCol.every((el)=>(el.innerHTML!==""&&el.innerHTML==="O"));
                 let conditionD1=d1.every((el)=>(el.innerHTML!==""&&el.innerHTML==="O"));
                 let conditionD2=d2.every((el)=>(el.innerHTML!==""&&el.innerHTML==="O"));
+                
 
                 if(conditionR1==true||conditionR2==true||conditionR3==true||conditionC1==true||conditionC2==true||conditionC3==true||conditionD1==true||conditionD2==true){
                     img.style.display="block";
@@ -80,15 +110,13 @@ function checkWinner2(){
                     secScore++;
                     secondPlayer.innerHTML=`${secplrInp}:${secScore}`;                
                 }
+            
 }
 
-resetBtn.addEventListener("click",()=>{
-                        gameOver();
-})
 allBox.forEach((el)=>{
-
+        
         el.addEventListener("click",(event)=>{
-            bgmusic.play();
+        bgmusic.play();
         if(started==false){
             if(el.innerHTML=="X"||el.innerHTML=="O"){
             console.log("sorry the box is already filled");
@@ -98,15 +126,22 @@ allBox.forEach((el)=>{
                 el.innerHTML="X";
                 turns.innerHTML=`${secplrInp}'s turn`;
                 checkWinner1();
+                
         }else{
            el.innerHTML="O";
            turns.innerHTML=`${firPlrInp}'s turn`;
-           checkWinner2();   
+           checkWinner2(); 
+             
+           
         } 
     }
         }
         tingAudio.play();
+        
     });    
 
     });
-
+resetBtn.addEventListener("click",()=>{
+                        gameOver();
+});
+//the content of winner will be overwritten if we write this event before allBox click event
