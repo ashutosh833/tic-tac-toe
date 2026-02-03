@@ -113,7 +113,7 @@ margin-top: 50px;
     display: none;
 }
 
-@media(max-width:450px){
+@media(max-width:550px){
     body{
         background-color: beige;
     }
@@ -177,4 +177,5 @@ margin-top: 50px;
 }
 
 }
+
 
