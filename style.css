@@ -112,7 +112,7 @@ margin-top: 50px;
 
 @media(max-width:550px){
     body{
-        background-color: beige;
+        background-color:lightskyblue;
     }
     .gameContainer{
         overflow-y: hidden;
@@ -127,7 +127,6 @@ margin-top: 50px;
     }
     .container{
         margin:1.8rem;
-        margin-left:3rem;
         grid-template-columns: repeat(3,7rem);
         grid-template-rows: repeat(3,10vh);
         text-align: center;
@@ -135,13 +134,10 @@ margin-top: 50px;
         max-width: 30rem;
         padding-top: 1.5rem;
     }
-    .box{
-        background-color:white;
-    }
     .GameInfo{
     width:100%;
     max-width: 430px;
-    margin-left: 30px;
+    margin-left: 20px;
 }
     .img{
     display:none;
@@ -168,7 +164,7 @@ margin-top: 50px;
     bottom: 7rem;
     left: 8.3rem;
     font-weight: 550;
-    background-color: rgb(255, 38, 0);
+    background-color: rgb(15, 0, 148);
     color: rgb(255, 255, 255);
 }
 
@@ -180,7 +176,67 @@ margin-top: 50px;
 }
 
 }
+@media(min-height:400px){
+    .gameContainer{
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        font-size: 1px;
+        width: 100%;
+        max-width: 600px;
+        height: 100%;
+        max-height: 799px;
+        background-color: #aa64ff;
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        margin:1.5rem;
+        margin-top: 1rem;
+        margin-left: 3rem;
+        margin-bottom: 1rem;
+        grid-template-columns: repeat(3,5rem);
+        grid-template-rows: repeat(3,10vh);
+        text-align: center;
+        width: 100%;
+        max-width: 30rem;
+        padding-top: 1.5rem;
+    }
+    .Players .first{
+    margin-bottom: 0.2rem;
+    font-weight: 200;
+}
+.Players .second{
+    margin-bottom:0.4rem;
+    font-weight: 200;
+}
 
 
+#reset{
+    position: relative;
+    margin-top: 0px;
+    bottom: 0rem;
+    left: 0rem;
+    font-weight: 450;
+    width:35%;
+    height: 2.5rem;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    background-color: rgb(15, 0, 148);
+    color: rgb(255, 255, 255);
+}
 
+.GameInfo h1{
 
+    display: block;
+    font-size: 22px;
+    width: 100%;
+    max-width: 430px;
+}
+.Players{
+    margin-top: 20px;
+    margin-bottom: 20px;  
+}
+
+}
