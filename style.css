@@ -238,6 +238,11 @@ margin-top: 50px;
     margin-top: 20px;
     margin-bottom: 20px;  
 }
+.Players .winningStatus{
+    font-size:15px;
+    width: 400px;
+}
 
 }
+
 
